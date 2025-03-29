@@ -13,6 +13,7 @@
 ![Build](https://img.shields.io/badge/Built%20By-SAB%20%2B%20Synack-brightgreen)
 ![Style](https://img.shields.io/badge/Style-Minimal%20AF-lightgrey)
 
+[*Click here to view screenshots*](https://github.com/ceaserone/Clipboard2.txt-ClipGrabber/tree/main/screenshots)
 ---
 
 ✅***Features***:
