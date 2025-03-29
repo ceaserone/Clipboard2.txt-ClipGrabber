@@ -13,7 +13,13 @@
 ![Build](https://img.shields.io/badge/Built%20By-SAB%20%2B%20Synack-brightgreen)
 ![Style](https://img.shields.io/badge/Style-Minimal%20AF-lightgrey)
 
-[*Click here to view screenshots*](https://github.com/ceaserone/Clipboard2.txt-ClipGrabber/tree/main/screenshots)
+**Grab the latest relase**
+>[Download ClipGrabber]
+> (https://github.com/ceaserone/Clipboard2.txt-ClipGrabber/releases/latest)
+
+**Also check out the Screenshot's!**
+>[Go to Screenshots](https://github.com/ceaserone/Clipboard2.txt-ClipGrabber/tree/main/screenshots)
+
 ---
 
 ✅***Features***:
@@ -132,6 +138,22 @@ Doesn’t interrupt or crash other keyboards
 That little floating message means clipboard is being actively monitored. You can copy over and over from any app (Chrome, Notes, etc.) and every entry is safely saved to the .txt.
 
 -------
+![Version](https://img.shields.io/badge/version-v0.04--beta-blue)
+![Platform](https://img.shields.io/badge/platform-Android-lightgrey)
+![Status](https://img.shields.io/badge/status-BADASS-red)
+![Power](https://img.shields.io/badge/Clipboard-Intercepted-black)
+![Mood](https://img.shields.io/badge/Vibe-Legendary-purple)
+![Build](https://img.shields.io/badge/Built%20By-SAB%20%2B%20Synack-brightgreen)
+![Style](https://img.shields.io/badge/Style-Minimal%20AF-lightgrey)
+
+**Grab the latest relase**
+>[Download ClipGrabber]
+> (https://github.com/ceaserone/Clipboard2.txt-ClipGrabber/releases/latest)
+
+**Also check out the Screenshot's!**
+>[Go to Screenshots](https://github.com/ceaserone/Clipboard2.txt-ClipGrabber/tree/main/screenshots)
+
+---
 
 **Credits:**
 Built with love by Synack Network
