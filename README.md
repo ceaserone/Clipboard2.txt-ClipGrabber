@@ -48,7 +48,7 @@ Providing a minimal, usable keyboard so it can be enabled system-wide
 
 -------
 
-❗### Setup Instructions:
+### Setup Instructions!:
 
 ✅1. ***Install the APK***
 
