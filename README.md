@@ -1,4 +1,4 @@
-▫️# ClipGrabber Keyboard▫️
+# ClipGrabber Keyboard
 
   💯✅🏕️👍👌👇😜👽🔥♥️
 
