@@ -1,5 +1,5 @@
 # ClipGrabber!
-(**A keyboard that monitors and saves clipboard text**)
+***A keyboard that monitors and saves clipboard text***
 
   💯✅🏕️👍👌👇😜👽🔥♥️
 
