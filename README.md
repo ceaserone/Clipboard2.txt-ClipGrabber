@@ -1,6 +1,4 @@
-# Clipboard2.txt-ClipGrabber
-
-▫️#ClipGrabber Keyboard#▫️
+▫️# ClipGrabber Keyboard▫️
 
   💯✅🏕️👍👌👇😜👽🔥♥️
 
@@ -8,7 +6,7 @@ ClipGrabber is a custom Android keyboard that not only works as a minimalist tex
 
 ---
 
-✅Features:
+✅**Features**:
 
 ▫️Minimalist custom keyboard with:
 
