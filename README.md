@@ -34,7 +34,7 @@
 
 -------
 
-❓### Why do this❓
+### Why do this❓❓
 
 Android restricts any clipboard monitoring except by a custom keyboard, I couldn't find a single android app that simply let's you "super copy to clipboard" and have everything you copy instantly saved to a .txt file.
 
