@@ -7,7 +7,7 @@ ClipGrabber is a custom Android keyboard that not only works as a minimalist tex
 
 ---
 
-✅**Features**:
+✅***Features***:
 
 ▫️Minimalist custom keyboard with:
 
