@@ -95,19 +95,19 @@ Now, every time you copy text, it’s saved to the log file!
 
 ✅**Output Example**:
 
-clipboard.txt output:
+*clipboard.txt output:*
 
 My copied text here
----
 Another copied line
----
 https://example.com
----
+
 
 -------
 
 ### Why It’s Unique? 
+
 🔥💯🔥💯🔥💯🔥💯🔥
+
 There is no other Android clipboard logger that works silently, reliably, and doesn’t require root or hacks. This works entirely within Android’s allowed system, just smartly designed:
 
 Uses the keyboard to legally access clipboard
@@ -126,7 +126,8 @@ That little floating message means clipboard is being actively monitored. You ca
 
 **Credits:**
 Built with love by Synack Network
-Code + AI + Human collab by me and SAB, my AI copilot. 💯 ❤️👌🏕️😎
+Code + AI + Human collab by me and SAB, my AI copilot.
+💯 ❤️👌🏕️😎
 
 *License:*
 MIT — use it, improve it, remix it.
