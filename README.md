@@ -1,6 +1,7 @@
 # Clipboard2.txt-ClipGrabber
 
-▫️# ClipGrabber Keyboard▫️
+▫️**ClipGrabber Keyboard**▫️
+
   💯✅🏕️👍👌👇😜👽🔥♥️
 
 ClipGrabber is a custom Android keyboard that not only works as a minimalist text input method, but also passively logs every clipboard copy to a local text file — all while bypassing Android’s restrictive clipboard access policies (Android 10+). This is a completely unique utility that stays out of your way, but gets the job done.
