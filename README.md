@@ -3,7 +3,7 @@
 
   💯✅🏕️👍👌👇😜👽🔥♥️
 
-#### ClipGrabber is a custom Android keyboard that not only works as a minimalist text input method, but also passively logs every clipboard copy to a local text file — all while bypassing Android’s restrictive clipboard access policies (Android 10+). This is a completely unique utility that stays out of your way, but gets the job done.
+#### ClipGrabber is a custom Android keyboard that not only works as a minimalist text input method, but also passively logs every clipboard copy to a local text file — all while bypassing Android’s restrictive clipboard access policies (Android 10+). This is a completely unique utility that stays out of your way, but gets the job done. Basically you want to "Copy to Clipboard" over and over on a website quickly, but want the copied text to simoly save to a .txt automatically!? this gets the job done 👍 I looked everywhere for something this simple and couldn't find it anywhere so i made it myself, its fresh new (beta) anyone want to help refresh the UI or make it a little more stable and easier to use please fell free i would love to see changes.
 
 ---
 
@@ -34,7 +34,7 @@
 
 -------
 
-❓Why do this❓
+❓### Why do this❓
 
 Android restricts any clipboard monitoring except by a custom keyboard, I couldn't find a single android app that simply let's you "super copy to clipboard" and have everything you copy instantly saved to a .txt file.
 
@@ -48,13 +48,13 @@ Providing a minimal, usable keyboard so it can be enabled system-wide
 
 -------
 
-❗Setup Instructions:
+❗### Setup Instructions:
 
-✅1. Install the APK
+✅1. ***Install the APK***
 
 Build the project or install the release APK directly.
 
-✅2. Grant All Permissions
+✅2. ***Grant All Permissions***
 (I added every permission I could, some might need to enable all to get by androids security and to be able to copy all "copy to clipboard" text, but at most install, enable file system, enable keyboard and start)
 
 Manage External Storage
@@ -67,23 +67,23 @@ Ignore Battery Optimization
 App will request these at first launch.
 (if it doesn't do it yourself)
 
-✅3. Enable Keyboard
+✅3. ***Enable Keyboard***
 
 Go to:
 
 > Settings > System > Languages & Input > Keyboards > Manage Keyboards
 
-✅Enable ClipGrabber
+*Enable ClipGrabber*
 
 (Optional) Make it default keyboard for logging clipboard while you type
 
-✅4. Enable Accessibility Service (optional but recommended)
+✅4. ***Enable Accessibility*** Service (optional but recommended)
 
 This allows the app to keep monitoring clipboard even outside input fields.
 
 > Settings > Accessibility > Installed Services > ClipGrabber
 
-✅5. Start Monitoring
+✅5. ***Start Monitoring***
 
 Open the app and tap “Turn ON”
 
@@ -93,7 +93,7 @@ Now, every time you copy text, it’s saved to the log file!
 
 -------
 
-✅Output Example:
+✅**Output Example**:
 
 clipboard.txt output:
 
@@ -106,8 +106,8 @@ https://example.com
 
 -------
 
-💯🔥##Why It’s Unique🔥💯
-
+### Why It’s Unique? 
+🔥💯🔥💯🔥💯🔥💯🔥
 There is no other Android clipboard logger that works silently, reliably, and doesn’t require root or hacks. This works entirely within Android’s allowed system, just smartly designed:
 
 Uses the keyboard to legally access clipboard
@@ -118,15 +118,15 @@ Doesn’t interrupt or crash other keyboards
 
 -------
 
-When You See “Saving…”
+***When You See “Saving…”***
 
 That little floating message means clipboard is being actively monitored. You can copy over and over from any app (Chrome, Notes, etc.) and every entry is safely saved to the .txt.
 
 -------
 
-Credits:
+**Credits:**
 Built with love by Synack Network
 Code + AI + Human collab by me and SAB, my AI copilot. 💯 ❤️👌🏕️😎
 
-License:
+*License:*
 MIT — use it, improve it, remix it.
