@@ -1,0 +1,49 @@
+name: Android Manual Build
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    env:
+      JAVA_VERSION: "17"
+      ANDROID_API: "34"
+      BUILD_TOOLS: "34.0.0"
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: ${{ env.JAVA_VERSION }}
+          cache: gradle
+
+      - name: Install Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Install SDK packages
+        run: |
+          sdkmanager --install \
+            "platforms;android-${ANDROID_API}" \
+            "build-tools;${BUILD_TOOLS}" \
+            "platform-tools" \
+            "cmdline-tools;latest"
+          yes | sdkmanager --licenses
+
+      - name: Make Gradle executable
+        run: chmod +x ./gradlew
+
+      - name: Build (Debug APK)
+        run: ./gradlew --no-daemon clean assembleDebug
+
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ClipGrabber-debug-apk
+          path: app/build/outputs/apk/debug/*.apk
+          if-no-files-found: error
