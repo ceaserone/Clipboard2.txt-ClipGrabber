@@ -1,4 +1,5 @@
-
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
     <color name="syn_bg">#121417</color>
     <color name="syn_card">#1A1D23</color>
     <color name="syn_border">#262A33</color>
