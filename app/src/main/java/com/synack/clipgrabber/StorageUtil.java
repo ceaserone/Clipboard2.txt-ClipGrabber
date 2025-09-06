@@ -1,10 +1,12 @@
 package com.synack.clipgrabber;
 
-import android.content.*;
+import android.content.ContentValues;
+import android.content.Context;
 import android.database.Cursor;
 import android.net.Uri;
 import android.provider.MediaStore;
-import java.io.*;
+
+import java.io.OutputStream;
 
 public final class StorageUtil {
     private StorageUtil() {}
@@ -13,8 +15,10 @@ public final class StorageUtil {
         try {
             Uri fileUri = findOrCreateInDownloads(ctx, fileName);
             try (OutputStream os = ctx.getContentResolver().openOutputStream(fileUri, "wa")) {
-                os.write(text.getBytes());
-                os.flush();
+                if (os != null) {
+                    os.write(text.getBytes());
+                    os.flush();
+                }
             }
         } catch (Exception e) {
             e.printStackTrace();

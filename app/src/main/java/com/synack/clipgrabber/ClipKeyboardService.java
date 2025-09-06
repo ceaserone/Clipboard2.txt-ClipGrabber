@@ -24,7 +24,7 @@ public class ClipKeyboardService extends InputMethodService {
             } else if (id == R.id.keyComma) {
                 getCurrentInputConnection().commitText(",", 1);
             } else if (id == R.id.keyShift) {
-                // TODO: toggle caps/shift state
+                // TODO: caps/shift toggle
             } else {
                 getCurrentInputConnection().commitText(t, 1);
             }
@@ -35,7 +35,7 @@ public class ClipKeyboardService extends InputMethodService {
     }
 
     private void attachListenersRecursively(View v, View.OnClickListener key) {
-        if (v instanceof Button) v.setOnClickListener(key);
+        if (v instanceof Button) ((Button) v).setOnClickListener(key);
         if (v instanceof ViewGroup) {
             ViewGroup g = (ViewGroup) v;
             for (int i = 0; i < g.getChildCount(); i++) {
