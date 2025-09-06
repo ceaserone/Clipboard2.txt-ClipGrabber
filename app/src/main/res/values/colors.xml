@@ -1,2 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<PASTE THE colors.xml CONTENT HERE>
+
+    <color name="syn_bg">#121417</color>
+    <color name="syn_card">#1A1D23</color>
+    <color name="syn_border">#262A33</color>
+    <color name="syn_text">#E6E8EB</color>
+    <color name="syn_muted">#9AA3AE</color>
+    <color name="syn_accent">#3EA7F7</color>
+</resources>

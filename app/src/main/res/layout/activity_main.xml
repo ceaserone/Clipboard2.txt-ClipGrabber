@@ -1,23 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/mainLayout"
-    android:orientation="vertical"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
-    android:padding="40dp">
+    android:background="@color/syn_bg"
+    android:padding="16dp">
 
-    <Button
-        android:id="@+id/toggleButton"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/H1"
+            android:text="ClipGrabber" />
+
+        <LinearLayout
+            style="@style/Card"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_card_round">
+
+            <TextView
+                style="@style/Body"
+                android:text="Monitoring clipboard. Logs append to Downloads/clipboard.txt" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Bottom-right “Saving…” chip -->
+    <TextView
+        android:id="@+id/savingPill"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Turn ON" />
-
-    <Button
-        android:id="@+id/chooseDirButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Choose Save Directory"
-        android:layout_marginTop="30dp" />
-
-</LinearLayout>
+        android:text="Saving…"
+        android:textSize="13sp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/bg_saving_pill"
+        android:drawableLeft="@android:drawable/stat_notify_sync"
+        android:drawablePadding="8dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:translationY="-64dp"/>
+</FrameLayout>
