@@ -53,7 +53,7 @@ public class ClipboardMonitorService extends Service {
     @Override public int onStartCommand(Intent i, int f, int id) { return START_STICKY; }
 
     @Override public void onDestroy() {
-        if (cm != null && listener != null) cm.removePrimaryClipChangedListener(listener);
+        if (cm != null) cm.removePrimaryClipChangedListener(listener);
         super.onDestroy();
     }
 
