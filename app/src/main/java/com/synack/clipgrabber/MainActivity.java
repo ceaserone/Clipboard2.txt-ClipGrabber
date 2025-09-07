@@ -11,6 +11,7 @@ import android.provider.Settings;
 import android.Manifest;
 import android.content.pm.PackageManager;
 import android.os.Environment;
+import android.graphics.Color;
 
 import java.io.*;
 
@@ -37,13 +38,32 @@ public class MainActivity extends Activity {
 
         LinearLayout layout = new LinearLayout(this);
         layout.setOrientation(LinearLayout.VERTICAL);
-        layout.setPadding(50, 100, 50, 100);
+        layout.setPadding(40, 40, 40, 40);
+        layout.setBackgroundColor(Color.parseColor("#FFD3D3D3"));
+        layout.setGravity(Gravity.CENTER);
+
 
         Button toggleButton = new Button(this);
         toggleButton.setText("Turn ON");
+        toggleButton.setBackgroundResource(R.drawable.rounded_button);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            toggleButton.setElevation(8 * getResources().getDisplayMetrics().density);
+        }
+
 
         Button chooseDirButton = new Button(this);
         chooseDirButton.setText("Choose Save Directory");
+        chooseDirButton.setBackgroundResource(R.drawable.rounded_button);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            chooseDirButton.setElevation(8 * getResources().getDisplayMetrics().density);
+        }
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(
+            LinearLayout.LayoutParams.WRAP_CONTENT,
+            LinearLayout.LayoutParams.WRAP_CONTENT
+        );
+        params.setMargins(0, (int) (30 * getResources().getDisplayMetrics().density), 0, 0);
+        chooseDirButton.setLayoutParams(params);
+
 
         layout.addView(toggleButton);
         layout.addView(chooseDirButton);
