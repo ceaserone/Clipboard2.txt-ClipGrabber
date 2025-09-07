@@ -36,7 +36,7 @@ public class FloatingOverlayService extends Service {
 
         params.gravity = Gravity.TOP | Gravity.END;
         params.x = 10;
-        params.y = 100;
+        params.y = 100 + (int) (96 * getResources().getDisplayMetrics().density);
 
         windowManager = (WindowManager) getSystemService(WINDOW_SERVICE);
         windowManager.addView(floatingView, params);

@@ -20,8 +20,10 @@ public class InvisibleKeyboardService extends InputMethodService implements Keyb
     ClipboardManager clipboard;
     String lastClip = "";
     File saveFile;
-    private Keyboard keyboard;
+    private Keyboard qwertyKeyboard;
+    private Keyboard symbolsKeyboard;
     private KeyboardView kv;
+    private boolean isCaps = false;
 
     @Override
     public void onCreate() {
@@ -41,8 +43,9 @@ public class InvisibleKeyboardService extends InputMethodService implements Keyb
     @Override
     public View onCreateInputView() {
         kv = (KeyboardView) getLayoutInflater().inflate(R.layout.keyboard_view, null);
-        keyboard = new Keyboard(this, R.xml.qwerty_keyboard);
-        kv.setKeyboard(keyboard);
+        qwertyKeyboard = new Keyboard(this, R.xml.qwerty_keyboard);
+        symbolsKeyboard = new Keyboard(this, R.xml.symbols_keyboard);
+        kv.setKeyboard(qwertyKeyboard);
         kv.setOnKeyboardActionListener(this);
         kv.setPreviewEnabled(false);
         return kv;
@@ -72,12 +75,29 @@ public class InvisibleKeyboardService extends InputMethodService implements Keyb
             case Keyboard.KEYCODE_DELETE:
                 ic.deleteSurroundingText(1, 0);
                 break;
+            case Keyboard.KEYCODE_SHIFT:
+                isCaps = !isCaps;
+                qwertyKeyboard.setShifted(isCaps);
+                kv.invalidateAllKeys();
+                break;
+            case Keyboard.KEYCODE_MODE_CHANGE:
+                Keyboard current = kv.getKeyboard();
+                if (current == qwertyKeyboard) {
+                    kv.setKeyboard(symbolsKeyboard);
+                } else {
+                    kv.setKeyboard(qwertyKeyboard);
+                }
+                break;
             case 10: // Enter key
                 ic.sendKeyEvent(new KeyEvent(KeyEvent.ACTION_DOWN, KeyEvent.KEYCODE_ENTER));
                 ic.sendKeyEvent(new KeyEvent(KeyEvent.ACTION_UP, KeyEvent.KEYCODE_ENTER));
                 break;
             default:
-                ic.commitText(Character.toString((char) primaryCode), 1);
+                char code = (char) primaryCode;
+                if (Character.isLetter(code) && isCaps) {
+                    code = Character.toUpperCase(code);
+                }
+                ic.commitText(String.valueOf(code), 1);
         }
     }
 
