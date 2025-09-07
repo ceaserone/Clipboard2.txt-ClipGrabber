@@ -11,6 +11,7 @@ import android.provider.Settings;
 import android.Manifest;
 import android.content.pm.PackageManager;
 import android.os.Environment;
+import androidx.core.content.ContextCompat;
 
 import java.io.*;
 
@@ -38,19 +39,19 @@ public class MainActivity extends Activity {
         LinearLayout layout = new LinearLayout(this);
         layout.setOrientation(LinearLayout.VERTICAL);
         layout.setPadding(50, 100, 50, 100);
-        layout.setBackgroundColor(getResources().getColor(R.color.syn_bg));
+        layout.setBackgroundColor(ContextCompat.getColor(this, R.color.syn_bg));
 
         Button toggleButton = new Button(this);
         toggleButton.setText("Turn ON");
         toggleButton.setBackground(getDrawable(R.drawable.bg_modern_button));
-        toggleButton.setTextColor(getResources().getColor(android.R.color.black));
+        toggleButton.setTextColor(ContextCompat.getColor(this, android.R.color.black));
         toggleButton.setElevation(8f);
 
 
         Button chooseDirButton = new Button(this);
         chooseDirButton.setText("Choose Save Directory");
         chooseDirButton.setBackground(getDrawable(R.drawable.bg_modern_button));
-        chooseDirButton.setTextColor(getResources().getColor(android.R.color.black));
+        chooseDirButton.setTextColor(ContextCompat.getColor(this, android.R.color.black));
         chooseDirButton.setElevation(8f);
 
 

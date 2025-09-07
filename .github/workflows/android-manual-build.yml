@@ -38,6 +38,9 @@ jobs:
       - name: Make Gradle executable
         run: chmod +x ./gradlew
 
+      - name: Create local.properties
+        run: echo "sdk.dir=${ANDROID_HOME}" > local.properties
+
       - name: Build (Debug APK)
         run: ./gradlew --no-daemon clean assembleDebug
 
