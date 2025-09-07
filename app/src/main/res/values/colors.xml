@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="syn_bg">#121417</color>
+    <color name="syn_bg">#FFD3D3D3</color>
     <color name="syn_card">#1A1D23</color>
     <color name="syn_border">#262A33</color>
     <color name="syn_text">#E6E8EB</color>
