@@ -1,0 +1,79 @@
+name: Android Manual Build
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      JAVA_VERSION: "17"
+      ANDROID_API: "34"
+      BUILD_TOOLS: "34.0.0"
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: ${{ env.JAVA_VERSION }}
+          cache: gradle
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Accept licenses & install SDK packages
+        run: |
+          yes | sdkmanager --licenses
+          sdkmanager --install \
+            "platforms;android-${ANDROID_API}" \
+            "build-tools;${BUILD_TOOLS}" \
+            "platform-tools" \
+            "cmdline-tools;latest"
+
+      - name: Create local.properties
+        run: echo "sdk.dir=${ANDROID_HOME}" > local.properties
+
+      - name: Make Gradle executable
+        run: chmod +x ./gradlew
+
+      # ---- Preflight sanity: duplicate class detection & quick first-line check ----
+      - name: Sanity checks (duplicates & first lines)
+        shell: bash
+        run: |
+          set -euxo pipefail
+          echo "Locating classes:"
+          grep -RIl --include="*.java" "class ClipboardMonitorService" app/ || true
+          grep -RIl --include="*.java" "class ClipKeyboardService" app/ || true
+          grep -RIl --include="*.java" "class StorageUtil" app/ || true
+
+          echo "First lines (should begin with 'package'):"
+          head -n 3 app/src/main/java/com/synack/clipgrabber/ClipboardMonitorService.java || true
+          head -n 3 app/src/main/java/com/synack/clipgrabber/ClipKeyboardService.java || true
+          head -n 3 app/src/main/java/com/synack/clipgrabber/StorageUtil.java || true
+
+      - name: Build (Debug APK) with extra logging
+        run: |
+          set -o pipefail
+          ./gradlew --no-daemon clean :app:compileDebugJavaWithJavac --info | tee compile-info.log
+          ./gradlew --no-daemon assembleDebug | tee assemble.log
+
+      - name: Upload build logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: compile-and-assemble-logs
+          path: |
+            compile-info.log
+            assemble.log
+
+      - name: Upload APK artifact
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ClipGrabber-debug-apk
+          path: app/build/outputs/apk/debug/*.apk
+          if-no-files-found: error
