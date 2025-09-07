@@ -46,7 +46,10 @@
     <Row android:rowEdgeFlags="bottom">
         <Key android:codes="-2" android:keyLabel="ABC" android:keyWidth="20%p" android:keyEdgeFlags="left"/>
         <Key android:codes="44" android:keyLabel="," android:keyWidth="10%p"/>
-        <Key android:codes="32" android:keyIcon="@android:drawable/ic_input_space" android:keyWidth="40%p" android:isRepeatable="true"/>
+        <Key android:codes="32"
+     android:keyIcon="@drawable/ic_space_bar"
+     android:keyWidth="40%p"
+     android:isRepeatable="true"/>
         <Key android:codes="46" android:keyLabel="." android:keyWidth="10%p"/>
         <Key android:codes="10" android:keyIcon="@android:drawable/ic_media_play" android:keyWidth="20%p" android:keyEdgeFlags="right"/>
     </Row>
