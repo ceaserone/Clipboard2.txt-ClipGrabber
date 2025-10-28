@@ -2,6 +2,8 @@
 ***A keyboard that monitors and saves clipboard info to a .txt***
 
 [![Android Manual Build](https://github.com/ceaserone/Clipboard2.txt-ClipGrabber/actions/workflows/manual-build.yml/badge.svg)](https://github.com/ceaserone/Clipboard2.txt-ClipGrabber/actions/workflows/manual-build.yml)
+  
+  
   💯✅🏕️👍👌👇😜👽🔥♥️
 
 #### ClipGrabber is a custom Android keyboard that not only works as a minimalist text input method, but also passively logs every clipboard copy to a local text file — all while bypassing Android’s restrictive clipboard access policies (Android 10+). This is a completely unique utility that stays out of your way, but gets the job done. Basically you want to "Copy to Clipboard" over and over on a website quickly, but want the copied text to simoly save to a .txt automatically!? this gets the job done 👍 I looked everywhere for something this simple and couldn't find it anywhere so i made it myself, its fresh, new and still in beta, so anyone want to help refresh the UI or make it a little more stable and easier to use please feel free i would love to see changes.
